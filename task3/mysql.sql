@@ -2,7 +2,8 @@ CREATE database if not exists task3;
 use task3;
 
 create table if not exists user(
-    Receiving_date int(11) primary key auto_increment,
+    id int(11) primary key auto_increment,
+    Receiving_date date,
     Tracking_number varchar(255),
     product_name varchar(255),
     CBM varchar(10),
