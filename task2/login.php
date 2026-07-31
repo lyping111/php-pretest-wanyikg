@@ -1,13 +1,5 @@
 <?php
 include"db.php";
-
-   "Hello World <br>";
-   $name="john";
-   $age=31;
-   $gendar="male";
-   $age+=5;
-
-   "My name is $name, I am $age years old and I am a $gendar";
    
     if($_SERVER["REQUEST_METHOD"]=="POST"){
         $username= $_POST["username"];
@@ -22,8 +14,7 @@ include"db.php";
             $user = $result->fetch_assoc();
             
             if (password_verify($password, $user['password'])) {
-                $_SESSION["username"]=$user["username"];
-                $_SESSION["user_id"]=$user["id"];
+              
                 
                 echo "<script>alert('Login successful');
                 window.location.href='login.php';
